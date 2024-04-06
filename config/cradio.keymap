@@ -1,0 +1,62 @@
+// Copyright (c) 2022 The ZMK Contributors
+// SPDX-License-Identifier: MIT
+
+#include <behaviors.dtsi>
+#include "./custom/custom.dtsi"
+
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/ext_power.h>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
+
+/ {
+  keymap {
+    compatible = "zmk,keymap";
+
+    default_layer {
+      bindings = <
+        KP_Q__  KP_W__  KP_E__  KP_R__  KP_T__    KP_Y__  KP_U__  KP_I__  KP_O__  KP_P__
+        MT_A__  KP_S__  KP_D__  KP_F__  KP_G__    KP_H__  KP_J__  KP_K__  KP_L__  MT_SMC
+        MT_Z__  MT_X__  MT_C__  KP_V__  KP_B__    KP_N__  KP_M__  MT_CMA  MT_DOT  MT_SLS
+                                MO_NUM  TD_LAN    LT_ENT  MO_SYM
+      >;
+    };
+
+    symbols_layer {
+      bindings = <
+        KP_EXC  KP_AT_  KP_HSH  KP_DLR  KP_PCT    KP_CRT  KP_AMP  KP_AST  KP_UND  KP_EQL
+        KP_SFT  KP_GRV  KP_TID  TD_LPR  KP_LBK    KP_RBK  TD_RPR  KP_PIP  KP_BSL  KP_SFT
+        KP_CTL  KP_GUI  KP_ALT  KP_APS  KP_KMI    KP_PLS  KP_DQT  KP_ALT  KP_GUI  KP_CTL
+                                MO_CFG  CP_WRD    _TRNS_  _TRNS_
+      >;
+    };
+
+    num_layer {
+      bindings = <
+        __XX__  KP_PSC  KP_SLK  KP_BRK  KP_NLK    KP_7__  KP_8__  KP_9__  KP_AST  KP_MIN
+        KP_SFT  __XX__  __XX__  KP_INS  KP_HOM    KP_4__  KP_5__  KP_6__  KP_SLS  KP_PLS
+        KP_CTL  KP_GUI  KP_ALT  KP_DEL  KP_END    KP_1__  KP_2__  KP_3__  KP_DT_  KP_0__
+                                _TRNS_  _TRNS_    OS_SCP  MO_CFG
+      >;
+    };
+
+    nav_layer {
+      bindings = <
+        __XX__  __XX__  __XX__  KP_END  __XX__   KP_HOM  KP_PUP  __XX__  __XX__  __XX__
+        KP_SFT  __XX__  KP_PDN  __XX__  __XX__   KP_AL_  KP_AD_  KP_AU_  KP_AR_  __XX__
+        KP_CTL  KP_GUI  KP_ALT  __XX__  __XX__   __XX__  __XX__  __XX__  __XX__  __XX__
+                                _TRNS_  _TRNS_    _TRNS_  _TRNS_
+      >;
+    };
+
+    config_layer {
+      bindings = <
+        BT_SE0  BT_SE1  BT_SE2  BT_SE3  BT_SE4    KP_F7_  KP_F8_  KP_F9_  KP_F12  __XX__
+        BT_CLA  __XX__  __XX__  __XX__  __XX__    KP_F4_  KP_F5_  KP_F6_  KP_F11  __XX__
+        __XX__  __XX__  __XX__  __XX__  __XX__    KP_F1_  KP_F2_  KP_F3_  KP_F10  __XX__
+                                __XX__  _TRNS_    _TRNS_  __XX__
+      >;
+    };
+
+  };
+};
