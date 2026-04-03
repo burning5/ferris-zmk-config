@@ -107,10 +107,10 @@
 #define MT_A__ &mt LSHIFT A
 #define MT_SMC &mt LSHIFT SEMICOLON
 #define MT_Z__ &mt LCTRL Z
-#define MT_X__ &mt LGUI X
-#define MT_C__ &mt LALT C
-#define MT_CMA &mt LALT COMMA
-#define MT_DOT &mt LGUI DOT
+#define MT_X__ &mt LALT X
+#define MT_C__ &mt LGUI C
+#define MT_CMA &mt LGUI COMMA
+#define MT_DOT &mt LALT DOT
 #define MT_SLS &mt LCTL SLASH
 
 #define TD_COP &TD_CCP
